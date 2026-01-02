@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>五子棋 - Gomoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div>
+          <p class="kicker">五子棋</p>
+          <h1>Gomoku</h1>
+          <p class="subtitle">轮到 <span id="current-player">黑棋</span> 落子</p>
+        </div>
+        <div class="controls">
+          <button id="reset-btn" class="primary">重新开始</button>
+          <button id="undo-btn">悔棋</button>
+        </div>
+      </header>
+
+      <section class="board-panel">
+        <canvas id="board" width="540" height="540" aria-label="五子棋棋盘"></canvas>
+        <aside class="info">
+          <h2>规则提示</h2>
+          <ol>
+            <li>黑棋先行。</li>
+            <li>任意方向连续五子即可获胜。</li>
+            <li>点击棋盘交叉点落子。</li>
+          </ol>
+          <div class="status" id="status-message">正在进行中</div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
